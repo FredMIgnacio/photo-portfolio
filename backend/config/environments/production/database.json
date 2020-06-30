@@ -1,0 +1,14 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb://portfolio-diana-admin:diana123@ds261817.mlab.com:61817/photo-portfolio-diana"
+      },
+      "options": {
+        "useNullAsDefault": true
+      }
+    }
+  }
+}

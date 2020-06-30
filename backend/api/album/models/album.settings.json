@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "albums",
+  "info": {
+    "name": "album"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "photos": {
+      "collection": "photo",
+      "via": "album"
+    },
+    "mainPhoto": {
+      "model": "photo"
+    }
+  }
+}

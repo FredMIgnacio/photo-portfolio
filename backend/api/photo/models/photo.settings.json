@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photos",
+  "info": {
+    "name": "photo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "album": {
+      "via": "photos",
+      "model": "album"
+    },
+    "published_at": {
+      "type": "date"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
